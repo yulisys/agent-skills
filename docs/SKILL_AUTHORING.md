@@ -1,12 +1,13 @@
 # 스킬 작성 가이드
 
-이 문서는 `plugins/<plugin-name>/skills/<skill-name>/SKILL.md`를 작성하는 규칙입니다.
+이 문서는 `skills/<skill-name>/SKILL.md`를 작성하는 규칙입니다.
 근거는 Claude Code 공식 문서 [Skills](https://code.claude.com/docs/en/skills)입니다.
 
 ## 1. 위치와 이름
 
 - 스킬 1개 = 디렉터리 1개. 디렉터리 안에 `SKILL.md`가 반드시 있어야 한다.
-- `skills/` 디렉터리는 플러그인 루트에 둔다. `.claude-plugin/` 안에 두면 로드되지 않는다.
+- 스킬 디렉터리는 리포 루트의 `skills/` 아래에 둔다. `.claude-plugin/` 안에 두면 로드되지 않는다.
+- 새 스킬은 `.claude-plugin/marketplace.json`에 등록해야 설치할 수 있다. 등록 방법은 README를 본다.
 - 디렉터리 이름은 kebab-case로 쓴다. `name`을 생략하면 디렉터리 이름이 스킬 이름이 된다.
 - 플러그인 스킬은 `/<plugin-name>:<skill-name>`으로 호출된다.
 
@@ -101,4 +102,5 @@ my-skill/
 - [ ] 긴 참고 자료는 별도 파일로 분리했다.
 - [ ] 부작용이 있는 스킬은 `disable-model-invocation: true`를 설정했다.
 - [ ] `claude plugin validate .`가 통과한다.
-- [ ] `claude --plugin-dir ./plugins/<plugin-name>`으로 실제 호출해 봤다.
+- [ ] `marketplace.json`에 플러그인 항목을 추가했다.
+- [ ] `claude --plugin-dir ./skills/<skill-name>`으로 실제 호출해 봤다.
