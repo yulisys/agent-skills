@@ -1,0 +1,8 @@
+{
+  "name": "agent-skills",
+  "description": "yulisys 개인 Agent Skill 마켓플레이스",
+  "owner": {
+    "name": "yulisys"
+  },
+  "plugins": []
+}
