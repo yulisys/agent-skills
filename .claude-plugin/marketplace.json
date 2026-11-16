@@ -1,8 +1,14 @@
 {
-  "name": "agent-skills",
+  "name": "yulisys-skills",
   "description": "yulisys 개인 Agent Skill 마켓플레이스",
   "owner": {
     "name": "yulisys"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "unslop-ko",
+      "source": "./plugins/unslop-ko",
+      "description": "번역투와 AI 티를 걷어내 자연스러운 한국어 문장으로 쓰거나 고치거나 검토한다"
+    }
+  ]
 }

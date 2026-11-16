@@ -1,7 +1,15 @@
 # agent-skills
 
 Claude Code용 Agent Skill을 관리하는 **플러그인 마켓플레이스** 리포지토리입니다.
+
+마켓플레이스 이름은 `yulisys-skills`입니다. 리포 이름 `agent-skills`는 Anthropic 공식 마켓플레이스의 [예약 이름](https://code.claude.com/docs/en/plugins/marketplace-reference.md#reserved-names)이라 마켓플레이스 이름으로 쓸 수 없습니다.
 스킬은 플러그인 단위로 묶어 `plugins/` 아래에 두고, `.claude-plugin/marketplace.json`에 등록해서 배포합니다.
+
+## 플러그인 목록
+
+| 플러그인 | 스킬 | 설명 |
+| :- | :- | :- |
+| `unslop-ko` | `/unslop-ko:unslop-ko` | 번역투와 AI 티를 걷어내 자연스러운 한국어 문장으로 쓰거나 고치거나 검토한다 |
 
 ## 디렉터리 구조
 
@@ -48,15 +56,17 @@ claude plugin marketplace add yulisys/agent-skills
 ```
 
 ```bash
-claude plugin install <plugin-name>@agent-skills
+claude plugin install <plugin-name>@yulisys-skills
 ```
+
+예: `claude plugin install unslop-ko@yulisys-skills`
 
 설치된 스킬은 `/<plugin-name>:<skill-name>` 형태로 호출됩니다.
 
-업데이트는 `/plugin` → **Marketplaces** → `agent-skills` → **Enable auto-update**로 켜거나, 수동으로 받습니다.
+업데이트는 `/plugin` → **Marketplaces** → `yulisys-skills` → **Enable auto-update**로 켜거나, 수동으로 받습니다.
 
 ```bash
-claude plugin marketplace update agent-skills
+claude plugin marketplace update yulisys-skills
 ```
 
 ## 새 스킬 추가 (관리하는 쪽)
