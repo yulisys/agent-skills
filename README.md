@@ -17,13 +17,11 @@ Claude Code용 Agent Skill을 관리하는 **플러그인 마켓플레이스** �
 agent-skills/                   # 리포 루트 = 마켓플레이스 루트
 ├── .claude-plugin/
 │   └── marketplace.json        # 마켓플레이스 카탈로그 (이 폴더에는 marketplace.json만 둔다)
-├── skills/
-│   └── <skill-name>/
-│       ├── SKILL.md            # 필수
-│       ├── reference.md        # 선택: 필요할 때만 읽히는 상세 문서
-│       └── scripts/            # 선택: 실행용 스크립트
-└── docs/
-    └── SKILL_AUTHORING.md      # 스킬 작성 가이드
+└── skills/
+    └── <skill-name>/
+        ├── SKILL.md            # 필수
+        ├── reference.md        # 선택: 필요할 때만 읽히는 상세 문서
+        └── scripts/            # 선택: 실행용 스크립트
 ```
 
 플러그인마다 폴더나 `plugin.json`을 따로 만들지 않습니다. `marketplace.json`의 각 항목이 플러그인 매니페스트 역할을 합니다.
@@ -69,7 +67,7 @@ claude plugin marketplace update yulisys-skills
 
 ## 새 스킬 추가 (관리하는 쪽)
 
-1. `skills/<skill-name>/SKILL.md`를 작성한다. [작성 가이드](docs/SKILL_AUTHORING.md)를 따른다.
+1. `skills/<skill-name>/SKILL.md`를 작성한다. 작성 규칙은 공식 문서 [Skills](https://code.claude.com/docs/en/skills)를 따른다.
 2. `.claude-plugin/marketplace.json`의 `plugins` 배열에 항목을 추가한다. 아래 예시를 참고한다.
 3. README의 플러그인 목록 표에 한 줄을 추가한다.
 4. 검증한다.
